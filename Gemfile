@@ -39,3 +39,13 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem "exifr"
+
+gem 'devise'
+gem 'bootstrap-sass'
+gem 'simple_form', '3.1.0.rc2'
+gem 'carrierwave'
+gem 'mini_magick', '4.0.0.rc'
+gem 'fog'
+gem 'dotenv-rails'
+gem 'rails_12factor'
+gem 'remotipart', '~> 1.2'

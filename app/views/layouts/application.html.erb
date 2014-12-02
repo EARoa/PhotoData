@@ -8,7 +8,11 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= link_to "Home", root_path, class: "btn btn-default"%>
+  <%= link_to "New", new_photo_path, class: "btn btn-primary" %>
+
+
+  <%= yield %>
 
 </body>
 </html>
