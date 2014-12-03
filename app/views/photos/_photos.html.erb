@@ -1,0 +1,10 @@
+
+<% @photos.each do |photo|%>
+<%=photo.id %>
+
+<% if photo.user_id == current_user. id %>
+<%= image_tag photo.photo.url(:thumb) %>
+<%= photo.photo.url%>
+<%=photo.id %>
+<%end%>
+<% end %>
