@@ -49,3 +49,6 @@ gem 'fog'
 gem 'dotenv-rails'
 gem 'rails_12factor'
 gem 'remotipart', '~> 1.2'
+
+
+gem "pry"
