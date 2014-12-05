@@ -1,10 +1,16 @@
+  <% @photos.each do |photo| %>
+  <div class="thumbnail col-sm-2">
+    <%= image_tag photo.photo.url, class: "img-responsive", "data-toggle"=>"modal", "data-target"=>"#modal-#{photo.id}" %>
+  </div>
 
-<% @photos.each do |photo|%>
-<%=photo.id %>
 
-<% if photo.user_id == current_user. id %>
-<%= image_tag photo.photo.url(:thumb) %>
-<%= photo.photo.url%>
-<%=photo.id %>
-<%end%>
-<% end %>
+  <div class="modal fade" id="modal-<%=photo.id%>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <%= render partial: 'details', locals: {photo: photo} %>
+      </div>
+    </div>
+  </div>
+
+
+  <% end %>
