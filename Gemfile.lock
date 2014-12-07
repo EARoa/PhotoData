@@ -226,6 +226,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   dotenv-rails
+  exiftool
   exiftool_vendored
   fog
   jbuilder (~> 2.0)

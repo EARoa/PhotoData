@@ -2,8 +2,13 @@ class PhotosController < ApplicationController
 
 
   def index
-      @photos = Photo.all
-      @photo = Photo.new
+
+    @photos = Photo.all
+
+
+      @tests = Exiftool.new("https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/5/IMG_0678.JPG")
+
+    @photo = Photo.new
   end
 
   def new

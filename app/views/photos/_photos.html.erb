@@ -1,6 +1,10 @@
+<%= @tests %>
+
+
   <% @photos.each do |photo| %>
   <div class="thumbnail col-sm-2">
     <%= image_tag photo.photo.url, class: "img-responsive", "data-toggle"=>"modal", "data-target"=>"#modal-#{photo.id}" %>
+
   </div>
 
 
@@ -8,6 +12,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <%= render partial: 'details', locals: {photo: photo} %>
+        <%= photo.to_hash %>
       </div>
     </div>
   </div>
