@@ -50,3 +50,6 @@ gem 'rails_12factor'
 gem 'remotipart', '~> 1.2'
 gem 'exiftool'
 gem 'exiftool_vendored'
+
+gem 'pry'
+gem 'exifr'

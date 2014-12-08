@@ -4,9 +4,25 @@ class PhotosController < ApplicationController
   def index
 
     @photos = Photo.all
+    # @tests = Exiftool.new("https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/5/IMG_0678.JPG")
 
 
-      @tests = Exiftool.new("https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/5/IMG_0678.JPG")
+    open("https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/5/IMG_0678.JPG")
+
+    tempfile = []
+
+    url = "https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/5/IMG_0678.JPG"
+
+
+    file = Tempfile.new('photodata').tap do |file|
+      file.binmode
+      # must be in binary mode
+      file.rewind
+    end
+    file.write(open(url).read)
+    @test =Exiftool.new(file.path)
+
+
 
     @photo = Photo.new
   end
