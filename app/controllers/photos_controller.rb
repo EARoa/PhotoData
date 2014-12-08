@@ -4,14 +4,14 @@ class PhotosController < ApplicationController
   def index
 
     @photos = Photo.all
+
     # @tests = Exiftool.new("https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/5/IMG_0678.JPG")
 
-
-    open("https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/5/IMG_0678.JPG")
+    open("https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/6/IMG_0683.JPG")
 
     tempfile = []
 
-    url = "https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/5/IMG_0678.JPG"
+    url = "https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/6/IMG_0683.JPG"
 
 
     file = Tempfile.new('photodata').tap do |file|
@@ -20,7 +20,7 @@ class PhotosController < ApplicationController
       file.rewind
     end
     file.write(open(url).read)
-    @test =Exiftool.new(file.path)
+    @test = Exiftool.new(file.path)
 
 
 

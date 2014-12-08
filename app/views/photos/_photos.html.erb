@@ -7,7 +7,6 @@
   <div class="thumbnail col-sm-2">
     <%= image_tag photo.photo.url, class: "img-responsive", "data-toggle"=>"modal", "data-target"=>"#modal-#{photo.id}" %>
     <%=  photo.photo.url %>
-
   </div>
 
 
@@ -15,13 +14,27 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <%= render partial: 'details', locals: {photo: photo} %>
-        <%= @test.to_hash[:file_size] %>
+
+        <b>File Size:</b> <%= @test.to_hash[:file_size] %>
+
+        <br />
+
         <!-- <%= @test.to_hash.inspect %> -->
-        <%= @test.to_hash[:shutter_speed_value] %>
-        <%= @test.to_hash[:make] %>
-        <%= @test.to_hash[:lens_model] %>
-        <%= @test.to_hash[:title] %>
-        <%= @test.to_hash[:title] %>
+
+        <b>Shutter Speed:</b> <%= @test.to_hash[:shutter_speed_value] %>
+          <br />
+        <b>Make:</b> <%= @test.to_hash[:make] %>
+          <br />
+
+        <b>Lense Model:</b> <%= @test.to_hash[:lens_model] %>
+
+        <br />
+
+        <b>Focal Length:</b> <%= @test.to_hash[:focal_length] %>
+
+        <br />
+
+        <b>Apeture Value:</b> <%= @test.to_hash[:aperture_value] %>
 
 
 
