@@ -15,28 +15,32 @@
       <div class="modal-content">
         <%= render partial: 'details', locals: {photo: photo} %>
 
-        <b>File Size:</b> <%= @test.to_hash[:file_size] %>
+        <b>File Size:</b> <%= photo.size %>
 
         <br />
 
         <!-- <%= @test.to_hash.inspect %> -->
 
-        <b>Shutter Speed:</b> <%= @test.to_hash[:shutter_speed_value] %>
-          <br />
-        <b>Make:</b> <%= @test.to_hash[:make] %>
+        <b>Shutter Speed:</b> <%= photo.shutter %>
           <br />
 
-        <b>Lense Model:</b> <%= @test.to_hash[:lens_model] %>
+          <b>Aperture:</b> <%= photo.aperture_value %>
+          <br />
 
-        <br />
-
-        <b>Focal Length:</b> <%= @test.to_hash[:focal_length] %>
-
-        <br />
-
-        <b>Apeture Value:</b> <%= @test.to_hash[:aperture_value] %>
+          <b>Camera:</b> <%= photo.camera %>
+          <br />
 
 
+          <b>ISO:</b> <%= photo.iso %>
+          <br />
+          <b>Make:</b> <%= photo.make %>
+          <br />
+          <b>Model:</b> <%= photo.model %>
+          <br />
+          <b>Focal Length:</b> <%= photo.focal_length_in35mm_format %>
+          <br />
+          <b>Lense Model:</b> <%= photo.lens_model %>
+          <br />
 
 
 
