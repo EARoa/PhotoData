@@ -25,6 +25,21 @@ class PhotosController < ApplicationController
       photo.size = @test.to_hash[:file_size]
       photo.shutter = @test.to_hash[:shutter_speed_value]
 
+      photo.camera = @test.to_hash[:camera]
+      photo.make = @test.to_hash[:make]
+      photo.model = @test.to_hash[:model]
+      photo.iso = @test.to_hash[:iso]
+
+      photo.aperture_value = @test.to_hash[:aperture_value]
+
+
+
+      photo.focal_length_in35mm_format = @test.to_hash[:focal_length_in35mm_format]
+
+      # photo.aperture = @test.to_hash[:aperture_value]
+      # photo.exposure = @test.to_hash[:exposure_time]
+      #
+
     end
   end
 
@@ -36,7 +51,25 @@ class PhotosController < ApplicationController
     @photos = Photo.all
 
 
-    @photo = Photo.new(params.require(:photo).permit(:name, :photo, :user_id, :size, :shutter))
+    @photo = Photo.new(params.require(:photo).permit(
+                                                      :name,
+                                                      :photo,
+                                                      :user_id,
+                                                      :size,
+                                                      :shutter,
+                                                      :focal_length_in35mm_format,
+                                                      :aperture_value,
+                                                      :camera,
+                                                      :make,
+                                                      :model,
+                                                      :iso,
+                                                      :exposure,
+                                                      ))
+
+
+
+
+
     if @photo.save
       redirect_to root_path
         else

@@ -16,37 +16,28 @@
         <%= render partial: 'details', locals: {photo: photo} %>
 
         <b>File Size:</b> <%= photo.size %>
-
-        <br />
-
-        <!-- <%= @test.to_hash.inspect %> -->
-
+          <br />
         <b>Shutter Speed:</b> <%= photo.shutter %>
           <br />
 
-          <b>Aperture:</b> <%= photo.aperture_value %>
-          <br />
 
-          <b>Camera:</b> <%= photo.camera %>
-          <br />
-
-
-          <b>ISO:</b> <%= photo.iso %>
-          <br />
-          <b>Make:</b> <%= photo.make %>
-          <br />
-          <b>Model:</b> <%= photo.model %>
-          <br />
-          <b>Focal Length:</b> <%= photo.focal_length_in35mm_format %>
-          <br />
-          <b>Lense Model:</b> <%= photo.lens_model %>
+        <b>Aperture:</b> <%= photo.aperture_value %>
           <br />
 
 
 
-        <% if false %>
-        <%= photo.to_hash %>
-        <%end%>
+
+      <b>Focal Length:</b> <%= photo.focal_length_in35mm_format %>
+      <br />
+
+        <b>Make:</b> <%= photo.make %>
+          <br />
+        <b>Model:</b> <%= photo.model %>
+          <br />
+        <b>ISO:</b> <%= photo.iso %>
+          <br />
+
+
 
   </div>
     </div>
