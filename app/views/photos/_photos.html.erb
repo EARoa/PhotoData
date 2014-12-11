@@ -1,21 +1,23 @@
-
-  <div class="thumbpad">
-    <% @photos.each do |photo| %>
-    <% if photo.user_id == current_user. id %>
-    <div class=" thumbnail col-sm-2">
-      <%= image_tag photo.photo.url(:thumb), class: "img-responsive", "data-toggle"=>"modal", "data-target"=>"#modal-#{photo.id}" %>
-      <%= photo.name %>
-    </div>
-  </div>
+<% @photos.each do |photo| %>
 
 
+<div class="img-thumbnail col-sm-6 col-md-3">
+  <center>
+    <%= image_tag photo.photo.url(:large), class:"img-responsive", "data-toggle"=>"modal", "data-target"=>"#modal-#{photo.id}" %>
+    <div class="uptext">  <%= photo.name%> </div>
+  </center>
+</div>
+
+
+<center>
 <div class="modal fade" id="modal-<%=photo.id%>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
   <div class="modal-dialog">
     <div class="modal-content">
       <%= render partial: 'details', locals: {photo: photo} %>
     </div>
   </div>
-</div>
 
-<%end%>
+</center>
+
 <% end %>

@@ -2,7 +2,7 @@ class PhotosController < ApplicationController
 
 
   def index
-    @photos = Photo.all
+    @photos = current_user.photos
 
     @photos.each do |photo|
 
