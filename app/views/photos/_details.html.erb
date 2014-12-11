@@ -1,27 +1,28 @@
 <div class="row">
-  <div class="col-sm-4">
+  <div class="col-sm-10">
 
     <%= image_tag photo.photo.url, class: "img-responsive" %>
 
-    <h1> <%= photo.name %> </h1>
-      <br />
-    <b>File Size:</b> <%= photo.size %>
-      <hr>
+    <div class="cntr">
+        <h1> <%= photo.name %> </h1>
+          <br />
+        <b>File Size:</b> <%= photo.size %>
+          <hr>
 
-<!-- Exif Information -->
+    <!-- Exif Information -->
 
-    <b>Shutter Speed:</b> <%= photo.shutter %>
-      <br />
-    <b>Aperture:</b> <%= photo.aperture_value %>
-      <br />
-    <b>Focal Length:</b> <%= photo.focal_length_in35mm_format %>
-      <br />
-    <b>Make:</b> <%= photo.make %>
-      <br />
-    <b>Model:</b> <%= photo.model %>
-      <br />
-    <b>ISO:</b> <%= photo.iso %>
-    <br /><br />
-
+        <b>Shutter Speed:</b> <%= photo.shutter %>
+          <br />
+        <b>Aperture:</b> <%= photo.aperture_value %>
+          <br />
+        <b>Focal Length:</b> <%= photo.focal_length_in35mm_format %>
+          <br />
+        <b>Make:</b> <%= photo.make %>
+          <br />
+        <b>Model:</b> <%= photo.model %>
+          <br />
+        <b>ISO:</b> <%= photo.iso %>
+        <br /><br />
+    </div>
   </div>
 </div>
