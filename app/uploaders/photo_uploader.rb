@@ -37,11 +37,11 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :medium do
-    process :resize_to_fit => [300,300]
+    process :resize_to_fill => [300,300]
   end
 
   version :large do
-    process :resize_to_fit => [500, 500]
+    process :resize_to_fill => [500, 500]
   end
 
   process :right_orientation
