@@ -1,13 +1,11 @@
 <% @photos.each do |photo| %>
 
-
-<div class="img-thumbnail col-sm-6 col-md-3">
-  <center>
-    <%= image_tag photo.photo.url(:large), class:"img-responsive", "data-toggle"=>"modal", "data-target"=>"#modal-#{photo.id}" %>
-    <div class="uptext">  <%= photo.name%> </div>
-  </center>
-</div>
-
+  <div class="img-thumbnail col-sm-6 col-md-3">
+    <center>
+      <%= image_tag photo.photo.url(:large), class:"img-responsive", "data-toggle"=>"modal", "data-target"=>"#modal-#{photo.id}" %>
+      <div class="uptext">  <%= photo.name%> </div>
+    </center>
+  </div>
 
 <center>
 <div class="modal fade" id="modal-<%=photo.id%>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
