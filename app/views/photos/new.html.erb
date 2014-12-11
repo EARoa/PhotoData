@@ -1,15 +1,41 @@
-
-
-<div class="container">
-<h1>Upload New Photo</h1>
-<p>Upload a new photo to analyze its data.</p>
-
-<%= simple_form_for @photo do |f| %>
-<%= f.input :name %>
-<%= f.input :photo %>
-<%= f.association :user, :as => :hidden %>
-<%= f.submit "Analyze Photo",class: "btn btn-lg btn-primary"%>
-<% end %>
-
 <br />
+<br />
+<br />
+
+
+<div class="container cntr">
+  <div class="row vertical-offset-100">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Upload New Photo</h3>
+            <p>Upload a new photo to analyze its data.</p>
+        </div>
+
+        <div class="panel-body">
+
+          <%= simple_form_for @photo do |f| %>
+
+          <form accept-charset="UTF-8" role="form">
+            <fieldset>
+              <div class="form-group">
+                <%= f.input :name %>
+              </div>
+
+              <div class="form-group">
+                <%= f.input :photo %>
+              </div>
+
+              <%= f.association :user, :as => :hidden %>
+
+              <%= f.submit "Analyze Photo",class: "btn btn-lg btn-primary"%>
+            </fieldset>
+          </form>
+        <% end %>
+
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

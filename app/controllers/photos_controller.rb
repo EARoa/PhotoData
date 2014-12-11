@@ -2,10 +2,8 @@ class PhotosController < ApplicationController
 
 
   def index
-
     @photos = Photo.all
 
-    # @tests = Exiftool.new("https://photodata-dev.s3.amazonaws.com/uploads/photo/photo/5/IMG_0678.JPG")
     @photos.each do |photo|
 
       open("#{photo.photo}")
@@ -17,7 +15,6 @@ class PhotosController < ApplicationController
 
       file = Tempfile.new('photodata').tap do |file|
         file.binmode
-        # must be in binary mode
         file.rewind
       end
       file.write(open(url).read)
@@ -35,11 +32,6 @@ class PhotosController < ApplicationController
 
 
       photo.focal_length_in35mm_format = @test.to_hash[:focal_length_in35mm_format]
-
-      # photo.aperture = @test.to_hash[:aperture_value]
-      # photo.exposure = @test.to_hash[:exposure_time]
-      #
-
     end
   end
 
