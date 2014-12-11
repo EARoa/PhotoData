@@ -19,7 +19,7 @@
 
 body{
 
-  background-image: url("http://earoa.com/img/wood.png");
+  background-image: url("wood.png");
   background-color: #fff;
   padding: 0px 20px 0px 20px;
   background-repeat: no-repeat;
@@ -69,7 +69,10 @@ body {padding-top:20px;}
 }
 
 .img-thumbnail{
+  // margin: 25px;
+  margin: 10px 10px 10px 10px;
   padding: 15px;
+
 line-height: 1.428571429;
 background-color: white;
 border: 1px solid #dddddd;
