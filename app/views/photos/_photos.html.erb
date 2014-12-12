@@ -3,7 +3,8 @@
   <div class="img-thumbnail col-sm-6 col-md-3">
     <center>
       <%= image_tag photo.photo.url(:large), class:"img-responsive", "data-toggle"=>"modal", "data-target"=>"#modal-#{photo.id}" %>
-      <div class="uptext">  <%= photo.name%> </div>
+    <hr>
+      <b> <div class="uptext">  <%= photo.name%> </div></n\b>
     </center>
   </div>
 
@@ -11,7 +12,7 @@
 <div class="modal fade" id="modal-<%=photo.id%>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="img-lrg modal-content">
       <%= render partial: 'details', locals: {photo: photo} %>
     </div>
   </div>
